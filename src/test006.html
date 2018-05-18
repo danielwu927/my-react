@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>demo06</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+	<div id='example'></div>
+	<script  type="text/babel" charset="utf-8" async defer>
+			var MyTitle=React.createClass({
+				propTypes: {  //组件的PropTyepes属性验证组件实例的属性是否符合要求
+				title: React.propTypes.string.isRequired,  
+			},
+ 			render: function(){
+ 			return <h1>{this.props.title}</h1>;
+ 		}
+		});
+		var data=123;
+		ReactDOM.render(<MyTitle title={data}/>,
+		document.body
+		);//这里title属性通不过验证，控制台会显示一行错误信息
+
+	</script>    
+</body>
+</html>
