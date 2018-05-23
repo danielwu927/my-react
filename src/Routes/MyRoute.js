@@ -1,5 +1,5 @@
 /*
-* function:router for React
+* function:router for React，react-router4.0
 * note: 此页面为项目下所有前端页面的路由，需要在模板页面的js文件里引入此文件
 * author:wudi
 */
@@ -19,21 +19,21 @@ class MyRoute extends Component{
     			<div>
     			 <Route exact path="/" component={App}/>
     			 <Route path="/login" component={NormalLoginForm}/>
-    			 <Route path="/reg" component={RegistrationForm}/>   
+    			 <Route path="/reg" component={RegistrationForm}/>
     			 <Route path="/repos"component={Repos}/>
                  <Route path="/home" component={MyHome}/>
     			 	<Route path="/repos1/123456" component={Repo}/>
                     <Route path="/repos/reactjs/react-router" component={Repo}/>
                     <Route path="/repos/:userName/:repoName" component={Repo}/>
-        
+
                 <Route path="repos/:name" component={Repo}/>
 
-        
+
     		 	</div>
     		</BrowserRouter>
     	);
     }
-    
+
 }
 
 export default MyRoute;
